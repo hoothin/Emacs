@@ -1,7 +1,5 @@
-.smex-items
-.emacs.d/auto-save-list/*
-.emacs.desktop
-.emacs.desktop.lock
-.org-id-locations
-.session
-ac-comphist.dat
+/*
+!.gitignore
+!/.emacs.d/elpa/
+!/.emacs.d/lisp/
+!.emacs

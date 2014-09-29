@@ -1,447 +1,456 @@
 (1
- (load-relative .
-		[(0 1)
-		 nil "relative file load (within a multi-file Emacs package)" single])
- (test-unit .
-	    [(0 1)
-	     nil "Unit Test Framework for Emacs Lisp " single])
- (zenburn .
-	  [(1 8)
-	   nil "just some alien fruit salad to keep you in the zone" single])
- (multi-project .
-		[(0 0 1)
-		 nil "Work with multiple projects" single])
- (hungry-delete .
-		[(1 0)
-		 nil "hungry delete minor mode" single])
- (Save-visited-files .
-		     [(1 2)
-		      nil "save opened files across sessions" single])
- (c-eldoc .
-	  [(0 6)
-	   nil "helpful description of the arguments to C functions" single])
- (mv-shell .
-	   [(1 0)
-	    nil "keep buffers in sync with filename throughout 'mv'commands in shell-mode." single])
- (diff-git .
-	   [(0 1 1)
-	    nil "Git integration with diff-mode" single])
- (html-script-src .
-		  [(0 0 2)
-		   nil "Insert <script src=\"..\"> for popular JavaScript libraries" single])
- (rvm .
-      [(1 1)
-       nil "Emacs integration for rvm" single])
- (elisp-depend .
-	       [(0 4 1)
-		nil "Parse depend libraries of elisp file." single])
- (perspective .
-	      [(1 3)
-	       nil "switch between named \"perspectives\" of the editor" single])
- (ruby-electric .
-		[(1 1)
-		 nil "electric editing commands for ruby files" single])
- (yari .
-       [(0 3)
-	nil "Yet Another RI interface for Emacs" single])
- (smex .
-       [(1 1 1)
-	nil "M-x interface with Ido-style fuzzy matching." single])
- (drag-stuff .
-	     [(0 0 3)
-	      nil "Drag stuff (lines, words, region, etc...) around" single])
- (ruby-test-mode .
-		 [(1 0)
-		  nil "Minor mode for Behaviour and Test Driven" single])
- (applescript-mode .
-		   [(20090321)
-		    nil "major mode for editing AppleScript source" single])
- (mediawiki .
-	    [(1 1)
-	     nil "mediawiki frontend" single])
- (wrap-region .
-	      [(0 1 3)
-	       nil "Wrap text with punctation or tag" single])
- (twitter .
-	  [(20090422)
-	   nil "Simple Emacs-based client for Twitter" single])
- (pastie .
-	 [(20091230)
-	  nil "Emacs integration for pastie.org" single])
- (textmate .
-	   [(1)
-	    nil "TextMate minor mode for Emacs" single])
- (yaml-mode .
-	    [(0 0 5)
-	     nil "Major mode for editing YAML files" single])
- (rspec-mode .
-	     [(0 2)
-	      ((ruby-mode
-		(1 1)))
-	      "Enhance ruby-mode for RSpec" single])
- (htmlize .
-	  [(1 37)
-	   nil "Convert buffer text and decorations to HTML." single])
- (swank-clojure .
-		[(1 1 0)
-		 ((slime-repl
-		   (20091016))
-		  (clojure-mode
-		   (1 6)))
-		 "slime adapter for clojure" single])
- (slime-repl .
-	     [(20100404)
-	      ((slime
-		(20100404)))
-	      "Read-Eval-Print Loop written in Emacs Lisp" single])
- (slime .
-	[(20100404)
-	 nil "Superior Lisp Interaction Mode for Emacs" single])
- (nterm .
-	[(0 1)
-	 nil "New TERMinal emulator" single])
- (sass-mode .
-	    [(3 0 14)
-	     ((haml-mode
-	       (3 0 14)))
-	     "Major mode for editing Sass files" single])
- (haml-mode .
-	    [(3 0 14)
-	     nil "Major mode for editing Haml files" single])
- (smart-tab .
-	    [(0 3)
-	     nil "Intelligent tab completion and indentation." single])
- (cssh .
-       [(0 7)
-	nil "clusterssh implementation for emacs" single])
- (relax .
-	[(0 2)
-	 ((json
-	   (1 2))
-	  (javascript
-	   (1 99 8)))
-	 "For browsing and interacting with CouchDB" single])
- (shellfm .
-	  [(0 1)
-	   nil "Emacs Shell.FM interface" single])
- (texdrive .
-	   [(0 3 1)
-	    nil "minor mode for creating png images from TeX formulae " single])
- (paredit .
-	  [(20)
-	   nil "Parenthesis-Editing Minor Mode" single])
- (rotate-text .
-	      [(0 1)
-	       nil "cycle through words, symbols and patterns" single])
- (full-ack .
-	   [(0 2 1)
-	    nil "a front-end for ack" single])
- (recent-addresses .
-		   [(0 1)
-		    nil "store and recall recently used email addresses" single])
- (test-case-mode .
-		 [(0 1)
-		  ((fringe-helper
-		    (0 1 1)))
-		  "unit test front-end" single])
- (nav .
-      [(35)
-       nil "Emacs mode for IDE-like navigation of directories" single])
- (company .
-	  [(0 5)
-	   nil "extensible inline text completion mechanism" tar])
- (guess-style .
-	      [(0 1)
-	       nil "automatic setting of code style variables" single])
- (clojure-test-mode .
-		    [(1 4)
-		     ((slime
-		       (20091016))
-		      (clojure-mode
-		       (1 7)))
-		     "Minor mode for Clojure tests" single])
- (clojure-mode .
-	       [(1 7 1)
-		nil "Major mode for Clojure code" single])
- (magit .
-	[(0 8 1)
-	 nil "control Git from Emacs." single])
- (w3 .
-     [(4 0 46)
-      nil "A web browser written entirely in Emacs Lisp" tar])
- (yasnippet-bundle .
-		   [(0 6 1)
-		    nil "Yet another snippet extension (Auto compiled bundle)" single])
- (rinari .
-	 [(2 1)
-	  ((ruby-mode
-	    (1 1))
-	   (inf-ruby
-	    (2 1))
-	   (ruby-compilation
-	    (0 7))
-	   (jump
-	    (2 0)))
-	  "Rinari Is Not A Rails IDE" single])
- (jump .
-       [(2 0)
-	((findr
-	  (0 7))
-	 (inflections
-	  (1 0)))
-	"build functions which contextually jump between files" single])
- (inflections .
-	      [(1 0)
-	       nil "convert english words between singular and plural" single])
- (tumble .
-	 [(1 1)
-	  ((http-post-simple
-	    (1 0)))
-	  "an Emacs mode for Tumblr" single])
- (http-post-simple .
-		   [(1 0)
-		    nil "HTTP POST requests using the url library" single])
- (findr .
-	[(0 7)
-	 nil "Breadth-first file-finding facility for (X)Emacs" single])
- (ruby-compilation .
-		   [(0 7)
-		    ((ruby-mode
-		      (1 1))
-		     (inf-ruby
-		      (2 1)))
-		    "run a ruby process in a compilation buffer" single])
- (gist .
-       [(0 5)
-	nil "Emacs integration for gist.github.com" single])
- (confluence .
-	     [(1 4)
-	      ((xml-rpc
-		(1 6 4)))
-	      "Emacs mode for interacting with confluence wikis" single])
- (epresent .
-	   [(0 1)
-	    nil "Simple presentation mode for Emacs" single])
- (inf-ruby .
-	   [(2 1)
-	    ((ruby-mode
-	      (1 1)))
-	    "Run a ruby process in a buffer" single])
- (ruby-mode .
-	    [(1 1)
-	     nil "Major mode for editing Ruby files" single])
- (idle-highlight .
-		 [(1 0)
-		  nil "highlight the word the point is on" single])
- (find-file-in-project .
-		       [(2 0)
-			((project-local-variables
-			  (0 2)))
-			"Find files in a project quickly." single])
- (project-local-variables .
-			  [(0 2)
-			   nil "set project-local variables from a file" single])
- (lusty-explorer .
-		 [(2 4)
-		  nil "Dynamic filesystem explorer and buffer switcher" single])
- (tempo-snippets .
-		 [(0 1 5)
-		  nil "visual insertion of tempo templates" single])
- (highlight-80+ .
-		[(1 0)
-		 nil "highlight characters beyond column 80" single])
- (echo-pick .
-	    [(0 1)
-	     nil "filter for echo area status messages" single])
- (fringe-helper .
-		[(0 1 1)
-		 nil "helper functions for fringe bitmaps" single])
- (elk-test .
-	   [(0 3 2)
-	    ((fringe-helper
-	      (0 1 1)))
-	    "Emacs Lisp testing framework" single])
- (compile-bookmarks .
-		    [(0 2)
-		     nil "bookmarks for compilation commands" single])
- (pov-mode .
-	   [(3 2)
-	    nil "Major mode for editing POV-Ray scene files." tar])
- (js2-mode .
-	   [(20090723)
-	    nil "an improved JavaScript editing mode" single])
- (ert .
-      [(0 1)
-       nil "Emacs Lisp Regression Testing" single])
- (jtags .
-	[(0 96)
-	 nil "enhanced tags functionality for Java development" single])
- (eproject .
-	   [(0 4)
-	    nil "project workspaces for emacs" tar])
- (log4j-mode .
-	     [(1 3)
-	      nil "major mode for viewing log files" single])
- (nxml-mode .
-	    [(20041004)
-	     nil "Major mode for editing XML documents." tar])
- (columnify .
+ (ack .
+      [(1 3)
+       nil "Interface to ack-like source code search tools" tar
+       ((:keywords "tools" "processes" "convenience")
+	(:url . "https://github.com/leoliu/ack-el"))])
+ (ada-mode .
+	   [(5 1 5)
+	    ((wisi
+	      (1 0 5))
+	     (cl-lib
+	      (0 4))
+	     (emacs
+	      (24 2)))
+	    "major-mode for editing Ada sources" tar
+	    ((:url . "http://stephe-leake.org/emacs/ada-mode/emacs-ada-mode.html"))])
+ (adaptive-wrap .
+		[(0 5)
+		 nil "Smart line-wrapping with wrap-prefix" single
+		 ((:url . "http://elpa.gnu.org/packages/adaptive-wrap.html")
+		  (:keywords))])
+ (adjust-parens .
+		[(3 0)
+		 nil "Indent and dedent Lisp code, automatically adjust close parens" tar
+		 ((:url . "http://elpa.gnu.org/packages/adjust-parens.html"))])
+ (all .
+      [(1 0)
+       nil "Edit all lines matching a given regexp" single
+       ((:url . "http://elpa.gnu.org/packages/all.html")
+	(:keywords "matching"))])
+ (ascii-art-to-unicode .
+		       [(1 9)
+			nil "a small artist adjunct" single
+			((:url . "http://www.gnuvola.org/software/aa2u/")
+			 (:keywords "ascii" "unicode" "box-drawing"))])
+ (auctex .
+	 [(11 87 7)
+	  nil "Integrated environment for *TeX*" tar
+	  ((:url . "http://www.gnu.org/software/auctex/"))])
+ (aumix-mode .
+	     [(7)
+	      nil "run the aumix program in a buffer" single
+	      ((:url . "http://user42.tuxfamily.org/aumix-mode/index.html")
+	       (:keywords "multimedia" "mixer" "aumix"))])
+ (caps-lock .
 	    [(1 0)
-	     nil "arrange lines into columns" single])
- (gdb-mi .
-	 [(0 6 1 0)
-	  nil "User Interface for running GDB" single])
- (asciidoc .
-	   [(0 1)
-	    nil "asciidoc text file development support" single])
- (shell-current-directory .
-			  [(0 1)
-			   nil "create new shell based on buffer directory" single])
- (facebook .
-	   [(0 0 1)
-	    ((json
-	      (0)))
-	    "Access the Facebook API from emacs" single])
- (json .
-       [(1 2)
-	nil "JavaScript Object Notation parser / generator" single])
- (pick-backup .
-	      [(0 8)
-	       nil "easy access to versioned backup files" single])
- (idle-require .
-	       [(1 0)
-		nil "load elisp libraries while Emacs is idle" single])
- (highlight-symbol .
-		   [(1 1)
-		    nil "automatic and manual symbol highlighting" single])
- (auto-dictionary .
-		  [(1 0 1)
-		   nil "automatic dictionary switcher for flyspell" single])
- (dictionary .
-	     [(1 8 7)
-	      nil "an interface to an RFC 2229 dictionary server" tar])
+	     nil "Caps-lock as a minor mode" single
+	     ((:url . "http://elpa.gnu.org/packages/caps-lock.html")
+	      (:keywords))])
+ (chess .
+	[(2 0 4)
+	 ((cl-lib
+	   (0 5)))
+	 "Play chess in GNU Emacs" tar
+	 ((:keywords "games")
+	  (:url . "http://elpa.gnu.org/packages/chess.html"))])
+ (cl-lib .
+	 [(0 5)
+	  nil "Properly prefixed CL functions and macros" single
+	  ((:url . "http://elpa.gnu.org/packages/cl-lib.html")
+	   (:keywords))])
+ (coffee-mode .
+	      [(0 4 1 1)
+	       nil "Major mode for CoffeeScript files" single
+	       ((:url . "http://github.com/defunkt/coffee-mode")
+		(:keywords "coffeescript" "major" "mode"))])
+ (company .
+	  [(0 8 5)
+	   ((emacs
+	     (24 1))
+	    (cl-lib
+	     (0 5)))
+	   "Modular text completion framework" tar
+	   ((:keywords "abbrev" "convenience" "matching")
+	    (:url . "http://company-mode.github.io/"))])
+ (crisp .
+	[(1 3 4)
+	 nil "CRiSP/Brief Emacs emulator" single
+	 ((:url . "http://elpa.gnu.org/packages/crisp.html")
+	  (:keywords "emulations" "brief" "crisp"))])
+ (csv-mode .
+	   [(1 2)
+	    nil "Major mode for editing comma/char separated values" single
+	    ((:url . "http://centaur.maths.qmul.ac.uk/Emacs/")
+	     (:keywords "convenience"))])
+ (debbugs .
+	  [(0 6)
+	   nil "SOAP library to access debbugs servers" tar
+	   ((:keywords "comm" "hypermedia")
+	    (:url . "http://elpa.gnu.org/packages/debbugs.html"))])
+ (dict-tree .
+	    [(0 12 8)
+	     ((trie
+	       (0 2 5))
+	      (tNFA
+	       (0 1 1))
+	      (heap
+	       (0 3)))
+	     "Dictionary data structure" single
+	     ((:url . "http://www.dr-qubit.org/emacs.php")
+	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
+ (diff-hl .
+	  [(1 6 0)
+	   ((cl-lib
+	     (0 2)))
+	   "Highlight uncommitted changes" tar
+	   ((:keywords "vc" "diff")
+	    (:url . "https://github.com/dgutov/diff-hl"))])
+ (dismal .
+	 [(1 5)
+	  ((cl-lib
+	    (0)))
+	  "Dis Mode Ain't Lotus: Spreadsheet program Emacs" tar
+	  ((:url . "http://elpa.gnu.org/packages/dismal.html"))])
+ (djvu .
+       [(0 5)
+	nil "Edit and view Djvu files via djvused" single
+	((:url . "http://elpa.gnu.org/packages/djvu.html")
+	 (:keywords "files" "wp"))])
+ (docbook .
+	  [(0 1)
+	   nil "Info-like viewer for DocBook" single
+	   ((:url . "http://elpa.gnu.org/packages/docbook.html")
+	    (:keywords "docs" "help"))])
+ (easy-kill .
+	    [(0 9 3)
+	     ((emacs
+	       (24))
+	      (cl-lib
+	       (0 5)))
+	     "kill & mark things easily" tar
+	     ((:keywords "killing" "convenience")
+	      (:url . "https://github.com/leoliu/easy-kill"))])
+ (ediprolog .
+	    [(1 0)
+	     nil "Emacs Does Interactive Prolog" single
+	     ((:url . "http://elpa.gnu.org/packages/ediprolog.html")
+	      (:keywords "languages" "processes"))])
+ (eldoc-eval .
+	     [(0 1)
+	      nil "Enable eldoc support when minibuffer is in use." single
+	      ((:url . "http://elpa.gnu.org/packages/eldoc-eval.html")
+	       (:keywords))])
+ (electric-spacing .
+		   [(5 0)
+		    nil "Insert operators with surrounding spaces smartly" single
+		    ((:url . "http://elpa.gnu.org/packages/electric-spacing.html")
+		     (:keywords))])
+ (enwc .
+       [(1 0)
+	nil "The Emacs Network Client" tar
+	((:keywords "enwc" "network" "wicd" "manager" "nm")
+	 (:url . "http://elpa.gnu.org/packages/enwc.html"))])
+ (epoch-view .
+	     [(0 0 1)
+	      nil "Minor mode to visualize epoch timestamps" single
+	      ((:url . "http://elpa.gnu.org/packages/epoch-view.html")
+	       (:keywords "data" "timestamp" "epoch" "unix"))])
+ (ergoemacs-mode .
+		 [(5 14 7 3)
+		  ((emacs
+		    (24 1))
+		   (undo-tree
+		    (0 6 5)))
+		  "Emacs mode based on common modern interface and ergonomics." tar
+		  ((:keywords "convenience")
+		   (:url . "https://github.com/ergoemacs/ergoemacs-mode"))])
+ (f90-interface-browser .
+			[(1 1)
+			 nil "Parse and browse f90 interfaces" single
+			 ((:url . "http://github.com/wence-/f90-iface/")
+			  (:keywords))])
+ (flylisp .
+	  [(0 2)
+	   ((emacs
+	     (24 1))
+	    (cl-lib
+	     (0 4)))
+	   "Color unbalanced parentheses and parentheses inconsistent with indentation" single
+	   ((:url . "http://elpa.gnu.org/packages/flylisp.html")
+	    (:keywords))])
+ (ggtags .
+	 [(0 8 6)
+	  ((emacs
+	    (24))
+	   (cl-lib
+	    (0 5)))
+	  "emacs frontend to GNU Global source code tagging system" single
+	  ((:url . "https://github.com/leoliu/ggtags")
+	   (:keywords "tools" "convenience"))])
+ (gnugo .
+	[(3 0 0)
+	 ((ascii-art-to-unicode
+	   (1 5))
+	  (xpm
+	   (1 0 1))
+	  (cl-lib
+	   (0 5)))
+	 "play GNU Go in a buffer" tar
+	 ((:keywords "games" "processes")
+	  (:url . "http://www.gnuvola.org/software/gnugo/"))])
+ (heap .
+       [(0 3)
+	nil "Heap (a.k.a. priority queue) data structure" single
+	((:url . "http://www.dr-qubit.org/emacs.php")
+	 (:keywords "extensions" "data structures" "heap" "priority queue"))])
+ (ioccur .
+	 [(2 4)
+	  nil "Incremental occur" single
+	  ((:url . "http://elpa.gnu.org/packages/ioccur.html")
+	   (:keywords))])
+ (javaimp .
+	  [(0 4)
+	   nil "Add and reorder Java import statements in Maven projects" single
+	   ((:url . "http://elpa.gnu.org/packages/javaimp.html")
+	    (:keywords "java" "maven" "programming"))])
+ (jgraph-mode .
+	      [(1 0)
+	       nil "Major mode for Jgraph files" single
+	       ((:url . "http://elpa.gnu.org/packages/jgraph-mode.html")
+		(:keywords "tex" "wp"))])
+ (js2-mode .
+	   [(20140114)
+	    ((emacs
+	      (24 1)))
+	    "Improved JavaScript editing mode" tar
+	    ((:keywords "languages" "javascript")
+	     (:url . "https://github.com/mooz/js2-mode/"))])
+ (jumpc .
+	[(3 0)
+	 nil "jump to previous insertion points" single
+	 ((:url . "http://elpa.gnu.org/packages/jumpc.html")
+	  (:keywords))])
+ (lex .
+      [(1 1)
+       nil "Lexical analyser construction" tar
+       ((:url . "http://elpa.gnu.org/packages/lex.html"))])
+ (lmc .
+      [(1 3)
+       nil "Little Man Computer in Elisp" single
+       ((:url . "http://elpa.gnu.org/packages/lmc.html")
+	(:keywords))])
+ (load-dir .
+	   [(0 0 3)
+	    nil "Load all Emacs Lisp files in a given directory" single
+	    ((:url . "http://elpa.gnu.org/packages/load-dir.html")
+	     (:keywords "lisp" "files" "convenience"))])
+ (markchars .
+	    [(0 2 0)
+	     nil "Mark chars fitting certain characteristics" single
+	     ((:url . "http://elpa.gnu.org/packages/markchars.html")
+	      (:keywords))])
+ (memory-usage .
+	       [(0 2)
+		nil "Analyze the memory usage of Emacs in various ways" single
+		((:url . "http://elpa.gnu.org/packages/memory-usage.html")
+		 (:keywords "maint"))])
+ (metar .
+	[(0 1)
+	 ((cl-lib
+	   (0 5)))
+	 "Retrieve and decode METAR weather information" single
+	 ((:url . "http://elpa.gnu.org/packages/metar.html")
+	  (:keywords "comm"))])
+ (minimap .
+	  [(1 2)
+	   nil "Sidebar showing a \"mini-map\" of a buffer" single
+	   ((:url . "http://elpa.gnu.org/packages/minimap.html")
+	    (:keywords))])
  (muse .
        [(3 20)
-	nil "Authoring and publishing tool" tar])
- (jimb-patch .
-	     [(1 5)
-	      nil "clean a patch for submission via email" single])
- (lisppaste .
-	    [(1 8)
-	     ((xml-rpc
-	       (1 6 7)))
-	     "Interact with the lisppaste pastebot via XML-RPC." single])
- (weblogger .
-	    [(1 4 3)
-	     ((xml-rpc
-	       (1 6 5)))
-	     "Weblog maintenance via XML-RPC APIs" single])
- (xml-rpc .
-	  [(1 6 7)
-	   nil "An elisp implementation of clientside XML-RPC" single])
- (iresize .
-	  [(0 2)
-	   nil "Interactively resize a window" single])
- (sgftree .
-	  [(0 1)
-	   nil "Read an sgf file and represent it as a tree" single])
- (chess .
-	[(1 96)
-	 nil "Play chess in Emacs" tar])
- (etags-select .
-	       [(1 11)
-		nil "Select from multiple tags" single])
- (less .
-       [(0 2)
-	nil "less style view mode" single])
- (smart-operator .
-		 [(0 9)
-		  nil "Insert operators packed with whitespaces smartly" single])
- (dired-isearch .
-		[(0 3)
-		 nil "isearch in Dired" single])
- (cal-china-x .
-	      [(0 6)
-	       nil "Chinese calendar extras" single])
- (wajig .
-	[(0 53)
-	 nil "an interface for wajig" single])
- (erc .
-      [(5 3)
-       nil "An Emacs Internet Relay Chat client" tar])
- (emms .
-       [(3 0)
-	nil "The Emacs Multimedia System" tar])
- (archive-downloader .
-		     [(1 1)
-		      nil "Download files from archive.org" single])
- (package .
-	  [(0 9)
-	   nil "Simple package system for Emacs" single])
- (highlight-parentheses .
-			[(1 0 1)
-			 nil "highlight surrounding parentheses" single])
- (kill-ring-search .
-		   [(1 1)
-		    nil "incremental search for the kill ring" single])
- (tex-math-preview .
-		   [(8)
-		    nil "preview TeX math expressions." single])
- (gtk-look .
-	   [(19)
-	    nil "lookup Gtk and Gnome documentation." single])
- (xtide .
-	[(16)
-	 nil "XTide display in Emacs" single])
- (compilation-recenter-end .
-			   [(4)
-			    nil "compilation-mode window recentre" single])
- (gdb-shell .
-	    [(0 4)
-	     nil "minor mode to add gdb features to shell" single])
- (highline .
-	   [(4 2)
-	    nil "minor mode to highlight current line in buffer" single])
- (lua-mode .
-	   [(20100617)
-	    nil "a major-mode for editing Lua scripts" single])
- (css-mode .
+	nil "Authoring and publishing tool for Emacs" tar
+	((:keywords "hypermedia")
+	 (:url . "http://mwolson.org/projects/EmacsMuse.html"))])
+ (nhexl-mode .
+	     [(0 1)
+	      nil "Minor mode to edit files via hex-dump format" single
+	      ((:url . "http://elpa.gnu.org/packages/nhexl-mode.html")
+	       (:keywords "data"))])
+ (nlinum .
+	 [(1 5)
+	  nil "Show line numbers in the margin" single
+	  ((:url . "http://elpa.gnu.org/packages/nlinum.html")
+	   (:keywords "convenience"))])
+ (notes-mode .
+	     [(1 30)
+	      nil "Indexing system for on-line note-taking" tar
+	      ((:url . "http://elpa.gnu.org/packages/notes-mode.html"))])
+ (num3-mode .
+	    [(1 2)
+	     nil "highlight groups of digits in long numbers" single
+	     ((:url . "http://elpa.gnu.org/packages/num3-mode.html")
+	      (:keywords "faces" "minor-mode"))])
+ (oauth2 .
+	 [(0 10)
+	  nil "OAuth 2.0 Authorization Protocol" single
+	  ((:url . "http://elpa.gnu.org/packages/oauth2.html")
+	   (:keywords "comm"))])
+ (omn-mode .
 	   [(1 0)
-	    nil "Major mode for editing Cascading Style Sheets" single])
- (javascript .
-	     [(2 2 1)
-	      nil "Major mode for editing JavaScript source text" single])
- (light-symbol .
-	       [(0 1)
-		nil "Minor mode to highlight symbol under point" single])
- (worklog .
-	  [(2 4 2)
-	   nil "time tracking mode" single])
- (abacus .
-	 [(1 0 2)
-	  nil "Abacus Calculator" single])
- (sudoku .
-	 [(0 3)
-	  nil "Simple sudoku game, can download puzzles from the web." single])
- (caps-mode .
-	    [(1 0)
-	     nil "(minor mode) letters are inserted capitalized" single])
- (lambdacalc .
-	     [(1 0)
-	      nil "Interpret lambda calculus expressions" single])
- (wtf .
-      [(2 0)
-       nil "Look up conversational and computing acronyms" single])
- (blank-mode .
-	     [(6 6)
-	      nil "Minor mode to visualize blanks" single])
- (bubbles .
-	  [(0 5)
-	   nil "Puzzle game for Emacs." single])
- (newsticker .
-	     [(1 10)
-	      nil "Headline news ticker" tar])
- (changelog-url .
+	    nil "Support for OWL Manchester Notation" single
+	    ((:url . "http://elpa.gnu.org/packages/omn-mode.html")
+	     (:keywords))])
+ (org .
+      [(20140922)
+       nil "Outline-based notes management and organizer" tar nil])
+ (osc .
+      [(0 1)
+       nil "Open Sound Control protocol library" single
+       ((:url . "http://elpa.gnu.org/packages/osc.html")
+	(:keywords "comm" "processes" "multimedia"))])
+ (poker .
+	[(0 1)
+	 nil "Texas hold'em poker" single
+	 ((:url . "http://elpa.gnu.org/packages/poker.html")
+	  (:keywords "games"))])
+ (quarter-plane .
 		[(0 1)
-		 nil "ChangeLog bugzilla buttonizer" tar]))
-
+		 nil "Minor mode for quarter-plane style editing" single
+		 ((:url . "http://elpa.gnu.org/packages/quarter-plane.html")
+		  (:keywords "convenience" "wp"))])
+ (queue .
+	[(0 1 1)
+	 nil "Queue data structure" single
+	 ((:url . "http://www.dr-qubit.org/emacs.php")
+	  (:keywords "extensions" "data structures" "queue"))])
+ (rainbow-mode .
+	       [(0 10)
+		nil "Colorize color names in buffers" single
+		((:url . "http://elpa.gnu.org/packages/rainbow-mode.html")
+		 (:keywords "faces"))])
+ (register-list .
+		[(0 1)
+		 nil "Interactively list/edit registers" single
+		 ((:url . "http://elpa.gnu.org/packages/register-list.html")
+		  (:keywords "register"))])
+ (rudel .
+	[(0 3)
+	 nil "A collaborative editing framework for Emacs" tar
+	 ((:keywords "rudel" "collaboration")
+	  (:url . "http://rudel.sourceforge.net/"))])
+ (shen-mode .
+	    [(0 1)
+	     nil "A major mode for editing shen source code" tar
+	     ((:keywords "languages" "shen")
+	      (:url . "http://elpa.gnu.org/packages/shen-mode.html"))])
+ (sisu-mode .
+	    [(3 0 3)
+	     nil "Major mode for SiSU markup text" single
+	     ((:url . "http://elpa.gnu.org/packages/sisu-mode.html")
+	      (:keywords "text" "processes" "tools"))])
+ (sml-mode .
+	   [(6 5)
+	    nil "Major mode for editing (Standard) ML" single
+	    ((:url . "http://elpa.gnu.org/packages/sml-mode.html")
+	     (:keywords "sml"))])
+ (sokoban .
+	  [(1 4)
+	   nil "Implementation of Sokoban for Emacs." tar
+	   ((:keywords "games")
+	    (:url . "http://elpa.gnu.org/packages/sokoban.html"))])
+ (svg-clock .
+	    [(0 5)
+	     nil "Analog clock using Scalable Vector Graphics" single
+	     ((:url . "http://elpa.gnu.org/packages/svg-clock.html")
+	      (:keywords "demo" "svg" "clock"))])
+ (tNFA .
+       [(0 1 1)
+	((queue
+	  (0 1)))
+	"Tagged non-deterministic finite-state automata" single
+	((:url . "http://www.dr-qubit.org/emacs.php")
+	 (:keywords "extensions" "matching" "data structures tnfa" "nfa" "dfa" "finite state automata" "automata" "regexp"))])
+ (temp-buffer-browse .
+		     [(1 2)
+		      nil "temp buffer browse mode" single
+		      ((:url . "http://elpa.gnu.org/packages/temp-buffer-browse.html")
+		       (:keywords "convenience"))])
+ (trie .
+       [(0 2 6)
+	((tNFA
+	  (0 1 1))
+	 (heap
+	  (0 3)))
+	"Trie data structure" single
+	((:url . "http://www.dr-qubit.org/emacs.php")
+	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
+ (undo-tree .
+	    [(0 6 5)
+	     nil "Treat undo history as a tree" single
+	     ((:url . "http://www.dr-qubit.org/emacs.php")
+	      (:keywords "convenience" "files" "undo" "redo" "history" "tree"))])
+ (uni-confusables .
+		  [(0 1)
+		   nil "Unicode confusables table" tar
+		   ((:url . "http://elpa.gnu.org/packages/uni-confusables.html"))])
+ (vlf .
+      [(1 6)
+       nil "View Large Files" tar
+       ((:keywords "large files" "utilities")
+	(:url . "https://github.com/m00natic/vlfi"))])
+ (w3 .
+     [(4 0 49)
+      nil "Fully customizable, largely undocumented web browser for Emacs" tar
+      ((:keywords "faces" "help" "comm" "news" "mail" "processes" "mouse" "hypermedia")
+       (:url . "http://elpa.gnu.org/packages/w3.html"))])
+ (wcheck-mode .
+	      [(2014 6 21)
+	       nil "General interface for text checkers" single
+	       ((:url . "https://github.com/tlikonen/wcheck-mode")
+		(:keywords "text" "spell" "check" "languages" "ispell"))])
+ (web-server .
+	     [(0 1 1)
+	      ((emacs
+		(24 3)))
+	      "Emacs Web Server" tar
+	      ((:keywords "http" "server" "network")
+	       (:url . "https://github.com/eschulte/emacs-web-server"))])
+ (websocket .
+	    [(1 3)
+	     nil "Emacs WebSocket client and server" tar
+	     ((:keywords "communication" "websocket" "server")
+	      (:url . "http://elpa.gnu.org/packages/websocket.html"))])
+ (windresize .
+	     [(0 1)
+	      nil "Resize windows interactively" single
+	      ((:url . "http://elpa.gnu.org/packages/windresize.html")
+	       (:keywords "window"))])
+ (wisi .
+       [(1 0 5)
+	((cl-lib
+	  (0 4))
+	 (emacs
+	  (24 2)))
+	"Utilities for implementing an indentation/navigation engine using a generalized LALR parser" tar
+	((:url . "http://stephe-leake.org/emacs/ada-mode/emacs-ada-mode.html"))])
+ (wpuzzle .
+	  [(1 1)
+	   nil "find as many word in a given time" single
+	   ((:url . "http://elpa.gnu.org/packages/wpuzzle.html")
+	    (:keywords))])
+ (xclip .
+	[(1 3)
+	 nil "use xclip to copy&paste" single
+	 ((:url . "http://elpa.gnu.org/packages/xclip.html")
+	  (:keywords "convenience" "tools"))])
+ (xpm .
+      [(1 0 3)
+       nil "edit XPM images" tar
+       ((:keywords "multimedia" "xpm")
+	(:url . "http://www.gnuvola.org/software/xpm/"))])
+ (yasnippet .
+	    [(0 8 0)
+	     nil "Yet another snippet extension for Emacs." tar
+	     ((:keywords "convenience" "emulation")
+	      (:url . "http://github.com/capitaomorte/yasnippet"))]))
