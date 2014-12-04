@@ -4,14 +4,21 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(global-linum-mode t)
- '(mu-worlds (quote (["书剑" "202.100.210.107" 6666 "Hoothin" "guest"])))
- )
+ '(mu-worlds (quote (["BookSword" "202.100.210.107" 6666 "Hoothin" "guest"])))
+ '(truncate-partial-width-windows nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "YaHei Consolas Hybrid" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
+ (set-default-font "YaHei Consolas Hybrid")
+
+;; Chinese Font 配制中文字体
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "YaHei Consolas Hybrid" :size 16)))
 
 ;;改变默认路径
 ;;(setenv "HOME" "")
@@ -60,8 +67,8 @@ used.  The value
 ;;去掉菜单栏
 ;(menu-bar-mode 0)
 
-;;不要滚动栏，现在都用滚轴鼠标了，可以不用滚动栏了   
-(scroll-bar-mode 1)
+;;不要滚动栏
+(scroll-bar-mode 0)
 
 ;;指针不要闪 
 ;(blink-cursor-mode -1)
@@ -77,7 +84,7 @@ used.  The value
 
 ;;在minibuffer上面可以显示列号   
 (column-number-mode t)   
-;;显示默认的文档的宽度，看起来比较舒服？   
+;;显示默认的文档的宽度
 (setq default-fill-column 60)
 
 ;;在minibuffer里启用自动补全函数和变量   
@@ -133,10 +140,10 @@ used.  The value
 ;;org-mode
 (setq org-publish-project-alist
       '(("note-org"	;;将所有org文件发布为html
-         :base-directory "~/org-mode/org.src/"
+         :base-directory "~/org/org.src/"
          :recursive t
          :base-extension "org"
-         :publishing-directory "~/org-mode/org.html/"
+         :publishing-directory "~/org/org.html/"
          :publishing-function org-html-publish-to-html
          :auto-sitemap t                ; Generate sitemap.org automagically...
          :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
@@ -144,8 +151,8 @@ used.  The value
          :auto-preamble t	;;html开头目录
          :makeindex t)	;;生成跳转到#+index: XXX标记的链接的汇总文件
         ("note-static"	;;发布附件
-         :base-directory "~/org-mode/org.src/"
-         :publishing-directory "D:/Workspace/emacs/org-mode/org.html/"
+         :base-directory "~/org/org.src/"
+         :publishing-directory "~/org/org.html/"
          :recursive t
          :base-extension "css//|js//|png//|jpg//|gif//|pdf//|mp3//|swf//|zip//|gz//|txt//|el"
          :publishing-function org-publish-attachment)
@@ -167,8 +174,8 @@ used.  The value
 \n")
 
 ;;org日历视图
-(setq org-agenda-files (list "~/org-mode/"
-"~/org-mode/org.src/"))
+(setq org-agenda-files (list "~/org/"
+"~/org/org.src/"))
 (global-set-key "\C-ca" 'org-agenda)
 
 (require 'ps-ccrypt)
@@ -244,11 +251,11 @@ used.  The value
 ;    ("IDEA" ?i "* IDEA %?\n %i\n %a" "~/org-mode/todo.org" "Idea List")
 ;    ))
 (setq org-capture-templates
-'(("t" "Todo" entry (file+headline "~/org-mode/todo.org" "Task")
+'(("t" "Todo" entry (file+headline "~/org/todo.org" "Task")
        "* TODO %?\n  %i\n  DEADLINE: <%<%Y-%m-%d %a>>  SCHEDULED: <%<%Y-%m-%d %a>>\n")
-  ("i" "Idea" entry (file+headline "~/org-mode/todo.org" "Inbox")
+  ("i" "Idea" entry (file+headline "~/org/todo.org" "Inbox")
        "* %?\n  %i\n  %a")
-  ("d" "Diary" entry (file+datetree (concat "~/org-mode/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
+  ("d" "Diary" entry (file+datetree (concat "~/org/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
        "* %?\nEntered on %U\n  %i")))
 
 ;;mush与mud支持
@@ -288,7 +295,7 @@ used.  The value
 ;;窗口快速跳转
 (global-set-key [C-f2]  'ace-window)
 
-;;撤销重做窗口操作
+;;撤销重做窗口操作C-c left C-c right
 (winner-mode 1)
 
 (global-set-key [C-f3] 'windresize)
