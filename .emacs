@@ -154,7 +154,7 @@ used.  The value
          :base-directory "~/org/org.src/"
          :publishing-directory "~/org/org.html/"
          :recursive t
-         :base-extension "css//|js//|png//|jpg//|gif//|pdf//|mp3//|swf//|zip//|gz//|txt//|el"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
          :publishing-function org-publish-attachment)
         ("note"	;;将html与附件一起发布
          :components ("note-org" "note-static"))))
@@ -378,3 +378,12 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 (global-set-key (kbd "C-x w <down>")   'buf-move-down)
 (global-set-key (kbd "C-x w <left>")   'buf-move-left)
 (global-set-key (kbd "C-x w <right>")  'buf-move-right)
+
+;; markdown-mode
+(require 'markdown-mode)
+(setq markdown-command "\"D:/Program Files/emacs/support/markdown.exe\"")
+(autoload 'markdown-mode "markdown-mode"
+"Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
