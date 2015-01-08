@@ -14,7 +14,7 @@
  '(default ((t (:family "YaHei Consolas Hybrid" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
  (set-default-font "YaHei Consolas Hybrid")
 
-;; Chinese Font 配制中文字体
+;; Chinese Font 配置中文字体
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
@@ -100,7 +100,7 @@ used.  The value
 (auto-image-file-mode)
 
 ;;{{{ 如果你正在编辑一个东西（在位置A），突然想到别的某处（位置B）要修改或查看
-;;或别的，总之你要过去看看，你可以用C-.来在当前位置做个标记，然后去你想去的
+;;或别的，总之你要过去看看，你可以用C-'来在当前位置做个标记，然后去你想去的
 ;;地方B，看了一会你觉的我可以回A去了，用C-,就回到刚才做标记的地方A，再用C-,又会回到B
 ;;这个由王垠创作
 (global-set-key (kbd "C-'") 'ska-point-to-register)
@@ -229,7 +229,6 @@ used.  The value
 ;;撤销删除
 (require 'redo+)
 (setq undo-no-redo t)	;;不要撤销撤销操作本身
-(global-set-key (kbd "C-.") 'redo)	;;重做增强，能重做多次
 
 ;;记录和恢复屏幕
 (load "desktop") 
@@ -284,7 +283,7 @@ used.  The value
 (global-set-key (kbd "C-=") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 
-;;快速跳转
+;;快速跳转 C-f1 跳单词 C-u C-f1 跳字母 C-u C-u C-f1 跳行
 (autoload
   'ace-jump-mode
   "ace-jump-mode"
@@ -387,3 +386,7 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;;C-z切换
+(require 'evil)
+(evil-mode 1)
