@@ -31,8 +31,8 @@
   ("elpa" . "http://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives'
   ("tromey" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives' 
-  ("marmalade" . "http://marmalade-repo.org/packages/") t)
+;;(add-to-list 'package-archives' 
+;;  ("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives'
   ("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
@@ -95,6 +95,7 @@ used.  The value
 
 ;;设置代理
 ;;(setq url-proxy-services '(("http" . "127.0.0.1:8087")))
+;;(setenv "http_proxy" "http://127.0.0.1:8087")
 
 ;;自动显示图片
 (auto-image-file-mode)
@@ -137,6 +138,9 @@ used.  The value
 (require 'helm-config)
 (helm-mode 1)
 
+;; 换行
+(global-set-key [f9] 'toggle-truncate-lines)
+
 ;;org-mode
 (setq org-publish-project-alist
       '(("note-org"	;;将所有org文件发布为html
@@ -158,7 +162,6 @@ used.  The value
          :publishing-function org-publish-attachment)
         ("note"	;;将html与附件一起发布
          :components ("note-org" "note-static"))))
-
 ;; org2blog
 (require 'org2blog-autoloads)
 (setq org2blog/wp-blog-alist
@@ -181,6 +184,21 @@ used.  The value
 (require 'ps-ccrypt)
 
 (appt-activate 1) 
+
+;;org-remember改名org-capture
+(setq org-default-notes-file "~/.notes")
+(define-key global-map [f12] 'org-capture)
+;(setq org-capture-templates
+;      '(("TODO" ?d "* TODO %?\n %x\n %a" "~/org-mode/todo.org" "Task List")
+;    ("IDEA" ?i "* IDEA %?\n %i\n %a" "~/org-mode/todo.org" "Idea List")
+;    ))
+(setq org-capture-templates
+'(("t" "Todo" entry (file+headline "~/org/todo.org" "Task")
+       "* TODO %?\n  %i\n  DEADLINE: <%<%Y-%m-%d %a>>  SCHEDULED: <%<%Y-%m-%d %a>>\n")
+  ("i" "Idea" entry (file+headline "~/org/todo.org" "Inbox")
+       "* %?\n  %i\n  %a")
+  ("d" "Diary" entry (file+datetree (concat "~/org/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
+   "* 无 %?\nEntered on %U\n  %i")))
 
 ;; Dangerous!!!  This might remove entries added by `appt-add' manually.在 Org Mode 的 Agenda View 下，按 r 或者 g，就可以把有具体时间的任务添加到appt的任务提醒列表里面。需要注意的是，手工使用 appt-add 添加的提醒将被清除，无法恢复。
 (org-agenda-to-appt t "TODO")
@@ -241,21 +259,6 @@ used.  The value
 (add-hook 'after-init-hook 'session-initialize) 
 (add-hook 'after-init-hook 'resume)
 (add-hook 'kill-emacs-hook 'save-current-configuration)
-
-;;org-remember改名org-capture
-(setq org-default-notes-file "~/.notes")
-(define-key global-map [f12] 'org-capture)
-;(setq org-capture-templates
-;      '(("TODO" ?d "* TODO %?\n %x\n %a" "~/org-mode/todo.org" "Task List")
-;    ("IDEA" ?i "* IDEA %?\n %i\n %a" "~/org-mode/todo.org" "Idea List")
-;    ))
-(setq org-capture-templates
-'(("t" "Todo" entry (file+headline "~/org/todo.org" "Task")
-       "* TODO %?\n  %i\n  DEADLINE: <%<%Y-%m-%d %a>>  SCHEDULED: <%<%Y-%m-%d %a>>\n")
-  ("i" "Idea" entry (file+headline "~/org/todo.org" "Inbox")
-       "* %?\n  %i\n  %a")
-  ("d" "Diary" entry (file+datetree (concat "~/org/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
-       "* %?\nEntered on %U\n  %i")))
 
 ;;mush与mud支持
 (autoload 'mu-open "mu" "Play on MUSHes and MUDs" t)

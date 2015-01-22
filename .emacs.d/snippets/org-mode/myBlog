@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: myBlog
+# key: myBlog
+# --
+#+TITLE: ${1:Title}
+#+CATEGORY: ${2:}
+#+TAGS: ${3:}
+#+OPTIONS: toc:t num:t ^:{}
+$0

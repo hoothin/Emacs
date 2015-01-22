@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: myBlog
-# key: myBlog
-# --
-#+TITLE: ${1:Title}
-#+CATEGORY: ${2:}
-$0
