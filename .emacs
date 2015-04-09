@@ -147,10 +147,10 @@ used.  The value
 ;;org-mode
 (setq org-publish-project-alist
       '(("note-org"	;;将所有org文件发布为html
-         :base-directory "~/org/org.src/"
+         :base-directory "~/note/org.src/"
          :recursive t
          :base-extension "org"
-         :publishing-directory "~/org/org.html/"
+         :publishing-directory "~/note/org.html/"
          :publishing-function org-html-publish-to-html
          :auto-sitemap t                ; Generate sitemap.org automagically...
          :sitemap-filename "!sitemap.org"  ; ... call it sitemap.org (it's the default)...
@@ -158,8 +158,8 @@ used.  The value
          :auto-preamble t	;;html开头目录
          :makeindex t)	;;生成跳转到#+index: XXX标记的链接的汇总文件
         ("note-static"	;;发布附件
-         :base-directory "~/org/org.src/"
-         :publishing-directory "~/org/org.html/"
+         :base-directory "~/note/org.src/"
+         :publishing-directory "~/note/org.html/"
          :recursive t
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
          :publishing-function org-publish-attachment)
@@ -180,8 +180,8 @@ used.  The value
 \n")
 
 ;;org日历视图
-(setq org-agenda-files (list "~/org/"
-"~/org/org.src/"))
+(setq org-agenda-files (list "~/note/"
+"~/note/org.src/"))
 (global-set-key "\C-ca" 'org-agenda)
 
 (require 'ps-ccrypt)
@@ -196,11 +196,11 @@ used.  The value
 ;    ("IDEA" ?i "* IDEA %?\n %i\n %a" "~/org-mode/todo.org" "Idea List")
 ;    ))
 (setq org-capture-templates
-'(("t" "Todo" entry (file+headline "~/org/todo.org" "Task")
+'(("t" "Todo" entry (file+headline "~/note/todo.org" "Task")
        "* TODO %?\n  %i\n  DEADLINE: <%<%Y-%m-%d %a>>  SCHEDULED: <%<%Y-%m-%d %a>>\n")
-  ("i" "Idea" entry (file+headline "~/org/todo.org" "Inbox")
+  ("i" "Idea" entry (file+headline "~/note/todo.org" "Inbox")
        "* %?\n  %i\n  %a")
-  ("d" "Diary" entry (file+datetree (concat "~/org/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
+  ("d" "Diary" entry (file+datetree (concat "~/note/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
    "* 无 %?\nEntered on %U\n  %i")))
 
 ;; Dangerous!!!  This might remove entries added by `appt-add' manually.在 Org Mode 的 Agenda View 下，按 r 或者 g，就可以把有具体时间的任务添加到appt的任务提醒列表里面。需要注意的是，手工使用 appt-add 添加的提醒将被清除，无法恢复。
@@ -395,3 +395,8 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 ;;C-z切换
 (require 'evil)
 (evil-mode 1)
+
+(require 'emmet-mode)
+   (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+   (add-hook 'html-mode-hook 'emmet-mode)
+   (add-hook 'css-mode-hook  'emmet-mode)
