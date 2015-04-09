@@ -24,9 +24,8 @@
 ;;(setenv "HOME" "")
 ;;(setenv "PATH" "")
 ;;(load-file "\\.emacs")
-; 如果想在emacs的SHELL中调用某个程序，要把它的路径加入 "PATH"  
+; 如果想在emacs的SHELL中调用某个程序，要把它的路径加入 "PATH"，此处必须是完整路径 
 ; 如果想在 elisp 中调用某个程序，要把它的路径加入 exec-path
-(setenv "PATH" (concat "~/support;~/support/dll" (getenv "PATH")))
 (setq exec-path (append exec-path '("~/support")))
 
 ;;包管理增加来源
