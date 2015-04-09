@@ -24,6 +24,10 @@
 ;;(setenv "HOME" "")
 ;;(setenv "PATH" "")
 ;;(load-file "\\.emacs")
+; 如果想在emacs的SHELL中调用某个程序，要把它的路径加入 "PATH"  
+; 如果想在 elisp 中调用某个程序，要把它的路径加入 exec-path
+(setenv "PATH" (concat "~/support;~/support/dll" (getenv "PATH")))
+(setq exec-path (append exec-path '("~/support")))
 
 ;;包管理增加来源
 (require 'package)
@@ -150,7 +154,7 @@ used.  The value
          :publishing-directory "~/org/org.html/"
          :publishing-function org-html-publish-to-html
          :auto-sitemap t                ; Generate sitemap.org automagically...
-         :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
+         :sitemap-filename "!sitemap.org"  ; ... call it sitemap.org (it's the default)...
          :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
          :auto-preamble t	;;html开头目录
          :makeindex t)	;;生成跳转到#+index: XXX标记的链接的汇总文件
@@ -265,7 +269,6 @@ used.  The value
 (add-hook 'mu-connection-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; w3m
-(add-to-list 'exec-path "D:/Program Files/emacs/support")
 (require 'w3m)
 ;;设置w3m为emacs的默认浏览器,使用新tabs打开由browser-usr函数输入的url
 (setq browse-url-browser-function 'w3m-browse-url browse-url-new-window-flag t)
@@ -383,7 +386,7 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 
 ;; markdown-mode
 (require 'markdown-mode)
-(setq markdown-command "\"D:/Program Files/emacs/support/markdown.exe\"")
+; (setq markdown-command "\"markdown.exe\"")
 (autoload 'markdown-mode "markdown-mode"
 "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))

@@ -3,5 +3,6 @@
 !.gitignore
 !/.emacs.d/
 !.emacs
+!support
 *archive-contents*
 *~

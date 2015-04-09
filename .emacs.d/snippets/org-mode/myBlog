@@ -6,4 +6,5 @@
 #+CATEGORY: ${2:}
 #+TAGS: ${3:}
 #+OPTIONS: toc:t num:t ^:{}
+#+DRAWERS: HIDDEN
 $0
