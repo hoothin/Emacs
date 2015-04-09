@@ -4,5 +4,7 @@
 !/.emacs.d/
 !.emacs
 !support
+!config
+!diary
 *archive-contents*
 *~

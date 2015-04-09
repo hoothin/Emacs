@@ -437,15 +437,21 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
       (holiday-fixed 4 18 "一一生日")
       (holiday-fixed 3 13 "老婆生日")
       (holiday-fixed 10 17 "我的生日")
+      (holiday-fixed 2 14 "情人节")
+      (holiday-fixed 4 1 "愚人节")
+      (holiday-fixed 12 25 "圣诞节")
+      (holiday-float 5 0 2 "母亲节")
+      (holiday-float 6 0 3 "父亲节")
 ))
-(setq calendar-holidays (append(append cal-china-x-important-holidays my-holidays) calendar-holidays))
 ;;除去基督徒的节日、希伯来人的节日和伊斯兰教的节日。
-(setq christian-holidays nil
-hebrew-holidays nil
-islamic-holidays nil
-solar-holidays nil
-bahai-holidays nil
-)
+; (setq christian-holidays nil
+; hebrew-holidays nil
+; islamic-holidays nil
+; solar-holidays nil
+; bahai-holidays nil
+; )
+(setq calendar-holidays (append cal-china-x-important-holidays my-holidays))
+
 ;;设置所在地的经纬度和地名，calendar中按S,可以根据这些信息告知你每天的
 ;;日出和日落的时间。
 (setq calendar-longitude +121.48)
@@ -457,4 +463,4 @@ bahai-holidays nil
 (add-to-list 'load-path "~/config")
 (require 'appt-config)
 
-(setq diary-file "~/diary")
+(add-hook 'diary-hook 'appt-make-list)
