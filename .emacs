@@ -198,10 +198,11 @@ used.  The value
 (setq org-capture-templates
 '(("t" "Todo" entry (file+headline "~/note/todo.org" "Task")
        "* TODO %?\n  %i\n  DEADLINE: <%<%Y-%m-%d %a>>  SCHEDULED: <%<%Y-%m-%d %a>>\n")
-  ("i" "Idea" entry (file+headline "~/note/todo.org" "Inbox")
+  ("i" "Idea" entry (file+headline "~/note/todo.org" "Tickler")
        "* %?\n  %i\n  %a")
   ("d" "Diary" entry (file+datetree (concat "~/note/journal/" (concat (format-time-string "%Y-%m") ".org.cpt")) "")
-   "* 无 %?\nEntered on %U\n  %i")))
+   "* null %?\nEntered on %U\n  %i")))
+(setq org-log-done 'time)
 
 ;; Dangerous!!!  This might remove entries added by `appt-add' manually.在 Org Mode 的 Agenda View 下，按 r 或者 g，就可以把有具体时间的任务添加到appt的任务提醒列表里面。需要注意的是，手工使用 appt-add 添加的提醒将被清除，无法恢复。
 (org-agenda-to-appt t "TODO")
@@ -406,3 +407,54 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+
+(setq org-ditaa-jar-path "~/support/ditaa/ditaa0_9.jar")
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+(org-babel-do-load-languages
+ (quote org-babel-load-languages)
+ (quote ((emacs-lisp . t)
+         (dot . t)
+         (ditaa . t)
+         (R . t)
+         (C . t)
+         (python . t)
+         (ruby . t)
+         (gnuplot . t)
+         (clojure . t)
+         (sh . t)
+         (ledger . t)
+         (org . t)
+         (plantuml . t)
+         (latex . t))))
+
+(require 'cal-china-x)
+    (setq mark-holidays-in-calendar t)
+    (setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+    ; (setq calendar-holidays cal-china-x-important-holidays)
+
+(setq my-holidays
+    '(;;纪念日
+      (holiday-fixed 4 18 "一一生日")
+      (holiday-fixed 3 13 "老婆生日")
+      (holiday-fixed 10 17 "我的生日")
+))
+(setq calendar-holidays (append(append cal-china-x-important-holidays my-holidays) calendar-holidays))
+;;除去基督徒的节日、希伯来人的节日和伊斯兰教的节日。
+(setq christian-holidays nil
+hebrew-holidays nil
+islamic-holidays nil
+solar-holidays nil
+bahai-holidays nil
+)
+;;设置所在地的经纬度和地名，calendar中按S,可以根据这些信息告知你每天的
+;;日出和日落的时间。
+(setq calendar-longitude +121.48)
+(setq calendar-latitude +31.22)
+(setq calendar-location-name "Shanghai")
+
+(setq appt-issue-message t)
+
+(add-to-list 'load-path "~/config")
+(require 'appt-config)
+
+(setq diary-file "~/diary")
