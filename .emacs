@@ -184,6 +184,9 @@ used.  The value
 "~/note/org.src/"))
 (global-set-key "\C-ca" 'org-agenda)
 
+;支持导出为markdown
+(setq org-export-backends (quote (ascii html icalendar latex md)))
+
 (require 'ps-ccrypt)
 
 (appt-activate 1) 
@@ -465,6 +468,9 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
 
 (add-hook 'diary-hook 'appt-make-list)
 
+(setq appt-message-warning-time 1)      ; 0 minute time before warning
+;(setq diary-file "~/diary")             ; diary file
+
 (defun bing-dict ()
  "Search current word in bing dictionary."
  (interactive)
@@ -488,3 +494,6 @@ Replaces default behaviour of comment-dwim, when it inserts comment at the end o
  ))
 )
 (global-set-key (kbd "C-c s") 'bing-dict)
+
+(require 'ahk-mode)
+(add-to-list 'auto-mode-alist '("\\.ahk\\'" . ahk-mode))
